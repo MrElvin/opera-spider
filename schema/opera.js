@@ -25,6 +25,14 @@ module.exports = (sequelize, DataTypes) => {
     operaComment: {
       type: DataTypes.TEXT,
       allowNull: true
+    },
+    operaBook: {
+      type: DataTypes.CHAR(50),
+      allowNull: true
+    },
+    operaTopic: {
+      type: DataTypes.CHAR(50),
+      allowNull: true
     }
   }, {
     tableName: 'operas',

@@ -1,4 +1,6 @@
 const db = require('../db')
+const Sequelize = require('sequelize')
+const Op = Sequelize.Op
 const OperaDB = db.Opera
 const operaModel = '../schema/opera'
 const Opera = OperaDB.import(operaModel)
@@ -42,8 +44,25 @@ const getOperaById = async function (id) {
   return operaInfo
 }
 
+/**
+ * 根据剧本 name 获取剧本
+ *
+ * @param {*} name
+ */
+const getOperaByName = async function (name) {
+  const operaInfo = await Opera.findOne({
+    where: {
+      operaName: {
+        [Op.like]: '%' + name + '%'
+      }
+    }
+  })
+  return operaInfo
+}
+
 module.exports = {
   createOpera,
   getAllOperas,
-  getOperaById
+  getOperaById,
+  getOperaByName
 }

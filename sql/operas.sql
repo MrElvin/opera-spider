@@ -8,5 +8,7 @@ CREATE TABLE IF NOT EXISTS `operas` (
   `operaSource`    text        NULL,
   `operaBrief`     text        NULL,
   `operaComment`   text        NULL,
+  `operaBook`      char(50)    NULL,
+  `operaTopic`     char(50)    NULL,
   PRIMARY KEY (`operaId`, `operaPeriod`)
 ) ENGINE=InnoDB;
