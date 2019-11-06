@@ -1,0 +1,32 @@
+{
+  "name": "opera-spider",
+  "version": "1.0.0",
+  "description": "get info from scripts.xikao.com, save in mysql",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "opera",
+    "mysql",
+    "spider"
+  ],
+  "author": "breezymelon",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "dotenv": "^8.2.0",
+    "mysql2": "^2.0.0",
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.7",
+    "sequelize": "^5.21.2"
+  },
+  "devDependencies": {
+    "eslint": "^6.6.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1"
+  }
+}
