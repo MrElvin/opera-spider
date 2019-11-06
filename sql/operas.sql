@@ -9,6 +9,6 @@ CREATE TABLE IF NOT EXISTS `operas` (
   `operaBrief`     text        NULL,
   `operaComment`   text        NULL,
   `operaBook`      char(50)    NULL,
-  `operaTopic`     char(50)    NULL,
+  `operaTopic`     ENUM('儿女缠绵', '世俗生活', '政治斗争', '军事风云', '神话传说', '草莽英雄')    NULL,
   PRIMARY KEY (`operaId`, `operaPeriod`)
 ) ENGINE=InnoDB;

@@ -3,6 +3,7 @@ const rp = require('request-promise-native')
 const cheerio = require('cheerio')
 const OPERA = require('./spiderConstants')
 const Opera = require('./models/opera')
+
 // [史记, 孤本元明杂剧, 今古奇观, 警世通言, 古今小说, 汉书, 醒世恒言, ]
 const books = [
   { bookName: '三国演义', year: '三国' },

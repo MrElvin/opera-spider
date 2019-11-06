@@ -31,7 +31,7 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: true
     },
     operaTopic: {
-      type: DataTypes.CHAR(50),
+      type: DataTypes.ENUM('儿女缠绵', '世俗生活', '政治斗争', '军事风云', '神话传说', '草莽英雄'),
       allowNull: true
     }
   }, {
