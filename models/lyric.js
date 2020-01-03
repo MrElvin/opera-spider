@@ -38,7 +38,26 @@ const getLyricByInfo = async function (searchInfo) {
   }
 }
 
+/**
+ * 找到某一个 operaId 的所有台词
+ *
+ * @param {*} operaId
+ */
+const getLyricsById = async function (operaId) {
+  try {
+    const lyrics = await Lyric.findAndCountAll({
+      where: {
+        operaId
+      }
+    })
+    return lyrics
+  } catch (err) {
+    console.error(err)
+  }
+}
+
 module.exports = {
   createLyric,
-  getLyricByInfo
+  getLyricByInfo,
+  getLyricsById
 }
